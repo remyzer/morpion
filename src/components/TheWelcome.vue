@@ -21,7 +21,7 @@ export default  {
   methods: {
    play: function(selectedElement){
       if(selectedElement == null){
-        return this.list.shift(); 
+        return this.list.shift();
       }
       else {
         return selectedElement;
@@ -29,10 +29,10 @@ export default  {
    },
    checkIfWinner: function(){
       if(this.cell1 == this.cell2 && this.cell2 == this.cell3 && this.cell1 != null){
-        
+
         this.endGame(this.cell1);
       } else if(this.cell4 == this.cell5 && this.cell5 == this.cell6 && this.cell4 != null){
-        
+
         this.endGame(this.cell4);
       } else if(this.cell7 == this.cell8 && this.cell8 == this.cell9 && this.cell7 != null){
 
