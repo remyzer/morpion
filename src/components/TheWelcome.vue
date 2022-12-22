@@ -25,7 +25,31 @@ export default  {
     }
    },
    checkIfWinner: function(){
-      
+      if(this.cell1 == this.cell2 && this.cell2 == this.cell3 && this.cell1 != null){
+
+        console.log("win !");
+      } else if(this.cell4 == this.cell5 && this.cell5 == this.cell6 && this.cell4 != null){
+
+        console.log("win !");
+      } else if(this.cell7 == this.cell8 && this.cell8 == this.cell9 && this.cell7 != null){
+
+        console.log("win !");
+      }else if(this.cell1 == this.cell4 && this.cell4 == this.cell7 && this.cell1 != null){
+
+        console.log("win !");
+      }else if(this.cell2 == this.cell5 && this.cell5 == this.cell8 && this.cell2 != null){
+
+        console.log("win !");
+      }else if(this.cell3 == this.cell6 && this.cell6 == this.cell9 && this.cell3 != null){
+
+        console.log("win !");
+      } else  if(this.cell1 == this.cell5 && this.cell5 == this.cell9 && this.cell1 != null){
+
+        console.log("win !");
+      }else  if(this.cell3 == this.cell5 && this.cell5 == this.cell7 && this.cell3 != null){
+
+        console.log("win !");
+      }
    }
   }
 }
