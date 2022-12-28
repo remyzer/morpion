@@ -31,35 +31,27 @@ export default  {
       if(this.cell1 == this.cell2 && this.cell2 == this.cell3 && this.cell1 != null){
         
         this.endGame(this.cell1);
-        console.log("win !");
       } else if(this.cell4 == this.cell5 && this.cell5 == this.cell6 && this.cell4 != null){
         
         this.endGame(this.cell4);
-        console.log("win !");
       } else if(this.cell7 == this.cell8 && this.cell8 == this.cell9 && this.cell7 != null){
 
         this.endGame(this.cell7);
-        console.log("win !");
       }else if(this.cell1 == this.cell4 && this.cell4 == this.cell7 && this.cell1 != null){
 
         this.endGame(this.cell1);
-        console.log("win !");
       }else if(this.cell2 == this.cell5 && this.cell5 == this.cell8 && this.cell2 != null){
 
         this.endGame(this.cell2);
-        console.log("win !");
       }else if(this.cell3 == this.cell6 && this.cell6 == this.cell9 && this.cell3 != null){
 
         this.endGame(this.cell3);
-        console.log("win !");
       } else  if(this.cell1 == this.cell5 && this.cell5 == this.cell9 && this.cell1 != null){
 
         this.endGame(this.cell1);
-        console.log("win !");
       }else  if(this.cell3 == this.cell5 && this.cell5 == this.cell7 && this.cell3 != null){
 
         this.endGame(this.cell3);
-        console.log("win !");
       }else if(this.list.length == 0){
         this.isDraw = true;
       }
@@ -88,12 +80,12 @@ export default  {
 }
 </script>
 <template>
-  <div>
+  <div id="content">
     <div v-if="isDraw">
       <p class="endText">Egalité !</p>
     </div>
     <div v-if="isFinished">
-      <p class="endText">Le joueur "<span id="winningSymbol">{{ winningSymbol }}</span>" à gagné !</p>
+      <p class="endText">Le joueur "{{ winningSymbol }}" à gagné !</p>
     </div>
     <div class="grid">
       <div class="row">
@@ -121,6 +113,9 @@ export default  {
 body {
   background-color: rgb(47, 47, 47);
 }
+#content {
+  align-content: center;
+}
 .grid {
   display: table;
   border-spacing: 5px
@@ -143,9 +138,5 @@ p {
 }
 .endText{
   color: white;
-}
-
-#winningSymbol {
-  color: salmon;
 }
 </style>
