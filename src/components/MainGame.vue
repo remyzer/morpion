@@ -79,42 +79,39 @@ export default  {
   }
 }
 </script>
+
 <template>
   <div id="content">
+    <div class="grid">
+      <div class="row">
+        <div class="cell" v-on:click="cell1 = play(cell1), checkIfWinner()"><p class="cellText">{{cell1}}</p></div>
+        <div class="cell" v-on:click="cell2 = play(cell2), checkIfWinner()"><p class="cellText">{{cell2}}</p></div>
+        <div class="cell" v-on:click="cell3 = play(cell3), checkIfWinner()"><p class="cellText">{{cell3}}</p></div>
+      </div>
+      <div class="row">
+        <div class="cell" v-on:click="cell4 = play(cell4), checkIfWinner()"><p class="cellText">{{cell4}}</p></div>
+        <div class="cell" v-on:click="cell5 = play(cell5), checkIfWinner()"><p class="cellText">{{cell5}}</p></div>
+        <div class="cell" v-on:click="cell6 = play(cell6), checkIfWinner()"><p class="cellText">{{cell6}}</p></div>
+      </div>
+      <div class="row">
+        <div class="cell" v-on:click="cell7 = play(cell7), checkIfWinner()"><p class="cellText">{{cell7}}</p></div>
+        <div class="cell" v-on:click="cell8 = play(cell8), checkIfWinner()"><p class="cellText">{{cell8}}</p></div>
+        <div class="cell" v-on:click="cell9 = play(cell9), checkIfWinner()"><p class="cellText">{{cell9}}</p></div>
+      </div>
+    </div>
+    <button v-on:click="resetGame()" >Reset</button>
     <div v-if="isDraw">
       <p class="endText">Egalité !</p>
     </div>
     <div v-if="isFinished">
-      <p class="endText">Le joueur "{{ winningSymbol }}" à gagné !</p>
-    </div>
-    <div class="grid">
-      <div class="row">
-        <div class="cell" v-on:click="cell1 = play(cell1), checkIfWinner()"><p>{{cell1}}</p></div>
-        <div class="cell" v-on:click="cell2 = play(cell2), checkIfWinner()"><p>{{cell2}}</p></div>
-        <div class="cell" v-on:click="cell3 = play(cell3), checkIfWinner()"><p>{{cell3}}</p></div>
-      </div>
-      <div class="row">
-        <div class="cell" v-on:click="cell4 = play(cell4), checkIfWinner()"><p>{{cell4}}</p></div>
-        <div class="cell" v-on:click="cell5 = play(cell5), checkIfWinner()"><p>{{cell5}}</p></div>
-        <div class="cell" v-on:click="cell6 = play(cell6), checkIfWinner()"><p>{{cell6}}</p></div>
-      </div>
-      <div class="row">
-        <div class="cell" v-on:click="cell7 = play(cell7), checkIfWinner()"><p>{{cell7}}</p></div>
-        <div class="cell" v-on:click="cell8 = play(cell8), checkIfWinner()"><p>{{cell8}}</p></div>
-        <div class="cell" v-on:click="cell9 = play(cell9), checkIfWinner()"><p>{{cell9}}</p></div>
-      </div>
-    </div>
-    <div>
-      <button v-on:click="resetGame()" >Reset</button>
+      <p class="endText">Le joueur "{{ winningSymbol }}" a gagné !</p>
     </div>
   </div>
 </template>
+
 <style>
 body {
   background-color: rgb(47, 47, 47);
-}
-#content {
-  align-content: center;
 }
 .grid {
   display: table;
@@ -128,15 +125,18 @@ body {
   height: 150px;
   display: table-cell;
   background-color: white;
-
-}
-p {
-  color: black;
-  margin: 50px;
-  font-size: 60px ;
-  float: start;
 }
 .endText{
   color: white;
+  font-size: 30px;
+  font-family: sans-serif;
+  text-align: center;
+}
+.cellText{
+  font-size: 40px;
+  font-family: sans-serif;
+  color: black;
+  text-align: center;
+  margin: 50px;
 }
 </style>
