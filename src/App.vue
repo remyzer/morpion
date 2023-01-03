@@ -1,11 +1,16 @@
-<script setup>
-import MainGame from './components/MainGame.vue'
-</script>
-
 <template>
+  <header>
+    <div id="navBlock">
+      <nav>
+       <RouterLink to="/"> <button>Home</button></RouterLink>
+       <RouterLink to="/game"> <button>Game </button></RouterLink>
+      </nav>
+    </div>
+  </header>
   <main>
-    <MainGame />
+    <RouterView/>
   </main>
 </template>
+
 
 

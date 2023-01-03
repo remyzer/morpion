@@ -28,31 +28,31 @@ export default  {
       }
    },
    checkIfWinner: function(){
-      if(this.cell1 == this.cell2 && this.cell2 == this.cell3 && this.cell1 != null){
+      if(this.cell1 === this.cell2 && this.cell2 === this.cell3 && this.cell1 != null){
 
         this.endGame(this.cell1);
-      } else if(this.cell4 == this.cell5 && this.cell5 == this.cell6 && this.cell4 != null){
+      } else if(this.cell4 === this.cell5 && this.cell5 === this.cell6 && this.cell4 != null){
 
         this.endGame(this.cell4);
-      } else if(this.cell7 == this.cell8 && this.cell8 == this.cell9 && this.cell7 != null){
+      } else if(this.cell7 === this.cell8 && this.cell8 === this.cell9 && this.cell7 != null){
 
         this.endGame(this.cell7);
-      }else if(this.cell1 == this.cell4 && this.cell4 == this.cell7 && this.cell1 != null){
+      }else if(this.cell1 === this.cell4 && this.cell4 === this.cell7 && this.cell1 != null){
 
         this.endGame(this.cell1);
-      }else if(this.cell2 == this.cell5 && this.cell5 == this.cell8 && this.cell2 != null){
+      }else if(this.cell2 === this.cell5 && this.cell5 === this.cell8 && this.cell2 != null){
 
         this.endGame(this.cell2);
-      }else if(this.cell3 == this.cell6 && this.cell6 == this.cell9 && this.cell3 != null){
+      }else if(this.cell3 === this.cell6 && this.cell6 === this.cell9 && this.cell3 != null){
 
         this.endGame(this.cell3);
-      } else  if(this.cell1 == this.cell5 && this.cell5 == this.cell9 && this.cell1 != null){
+      } else  if(this.cell1 === this.cell5 && this.cell5 === this.cell9 && this.cell1 != null){
 
         this.endGame(this.cell1);
-      }else  if(this.cell3 == this.cell5 && this.cell5 == this.cell7 && this.cell3 != null){
+      }else  if(this.cell3 === this.cell5 && this.cell5 === this.cell7 && this.cell3 != null){
 
         this.endGame(this.cell3);
-      }else if(this.list.length == 0){
+      }else if(this.list.length === 0){
         this.isDraw = true;
       }
    },
@@ -108,35 +108,3 @@ export default  {
     </div>
   </div>
 </template>
-
-<style>
-body {
-  background-color: rgb(47, 47, 47);
-}
-.grid {
-  display: table;
-  border-spacing: 5px
-}
-.row {
-  display: table-row
-}
-.cell {
-  width: 150px;
-  height: 150px;
-  display: table-cell;
-  background-color: white;
-}
-.endText{
-  color: white;
-  font-size: 30px;
-  font-family: sans-serif;
-  text-align: center;
-}
-.cellText{
-  font-size: 40px;
-  font-family: sans-serif;
-  color: black;
-  text-align: center;
-  margin: 50px;
-}
-</style>
