@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="content">
   <p>Jeu qui se joue à deux joueurs, sur un damier de 3 cases par 3 cases.</p>
   <p>Chaque joueur est représenté par un "symbole"</p>
   <p>Un joueur utilise toujours le même type de "symbole"</p>
@@ -8,9 +8,3 @@
   <p>Si la grille est remplie et qu'aucune ligne ne comporte trois symboles identiques, les joueurs finissent par un match nul.</p>
 </div>
 </template>
-
-<script>
-export default {
-  name: "Home"
-}
-</script>

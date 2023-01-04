@@ -1,11 +1,9 @@
 <template>
-  <header>
-    <div id="navBlock">
+  <header id="navBlock">
       <nav>
        <RouterLink to="/"> <button>Home</button></RouterLink>
        <RouterLink to="/game"> <button>Game </button></RouterLink>
       </nav>
-    </div>
   </header>
   <main>
     <RouterView/>

@@ -19,6 +19,11 @@ export default  {
     }
   },
   methods: {
+    /**
+     * Return the values of the first element in the list if the selected element is null.
+     * Else return the selected element to prevent clicking on the same cell.
+     * @param {string} selectedElement 
+     */
    play: function(selectedElement){
       if(selectedElement == null){
         return this.list.shift();
@@ -27,6 +32,9 @@ export default  {
         return selectedElement;
       }
    },
+   /**
+    * Checks every winning condition and call the method endGame or set the property isDraw if the game is a draw.
+    */
    checkIfWinner: function(){
       if(this.cell1 === this.cell2 && this.cell2 === this.cell3 && this.cell1 != null){
 
@@ -56,11 +64,20 @@ export default  {
         this.isDraw = true;
       }
    },
+   /**
+    * This function is called when a winning condition has been triggered.
+    * The parameter is the value of one cell, it's used to define the winningSymbol.
+    * This function set the list to an empty list so it's not possible to put symbols in the cells
+    * @param {string} winningSymbol 
+    */
    endGame: function(winningSymbol){
       this.list = [];
       this.isFinished = true;
       this.winningSymbol = winningSymbol;
    },
+   /**
+    * This function is called when the user click on the reset button.
+    */
    resetGame: function(){
       this.list = ["X", "O", "X", "O", "X", "O", "X", "O", "X"];
       this.winningSymbol = null;
@@ -81,7 +98,7 @@ export default  {
 </script>
 
 <template>
-  <div id="content">
+  <div class="content">
     <div class="grid">
       <div class="row">
         <div class="cell" v-on:click="cell1 = play(cell1), checkIfWinner()"><p class="cellText">{{cell1}}</p></div>

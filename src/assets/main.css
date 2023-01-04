@@ -1,6 +1,11 @@
 #app {
   margin: 0 auto;
 }
+
+.content{
+  margin-top: 10%;
+}
+
 header{
   height: 100%;
 }
@@ -67,6 +72,7 @@ button:focus {
 p {
   color: white;
   font-family: sans-serif;
+  text-align: center;
 }
 
 @media (max-width: 1064px) {
